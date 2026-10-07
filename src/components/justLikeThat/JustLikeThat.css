@@ -1,0 +1,70 @@
+.perchos-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.perchos-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: var(--alternative) var(--primary);
+  scrollbar-width: thin;
+}
+
+/* Chrome, Edge, Brave, Safari */
+.perchos-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.perchos-container::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+.perchos-container::-webkit-scrollbar-thumb {
+  background-color: var(--alternative);
+  border-radius: 10px;
+}
+
+.perchos-image {
+  flex: 0 0 85%;
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  scroll-snap-align: center;
+  border-radius: 4px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .perchos-container {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .perchos-image {
+    flex: 0 0 45%;
+    width: 45%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .perchos-container {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .perchos-image {
+    max-width: 320px;
+    width: 30%;
+  }
+}

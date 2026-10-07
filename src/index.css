@@ -1,0 +1,121 @@
+:root {
+  --primary: #2d2d30;
+  --secondary: #fff;
+  --alternative: #FF00FF;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  --navbar-offset: 72px;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Compensa la altura de la navbar sticky al navegar por anchors */
+section[id] {
+  scroll-margin-top: var(--navbar-offset);
+}
+
+body {
+  min-width: 320px;
+  background: var(--bg);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--alternative);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+
+h2 {
+  font-size: 5rem;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+}
+
+/* Títulos de sección: tipografía común (Events, JustLikeThat, Location) */
+.section-title,
+.location h2 {
+  color: var(--alternative);
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Barra del título (solo donde aplica la clase) */
+.section-title {
+  margin: 0;
+  padding: 10px;
+  background-color: var(--primary);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .section-title,
+  .location h2 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    padding: 12px 16px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .section-title,
+  .location h2 {
+    font-size: 2.25rem;
+  }
+
+  .section-title {
+    padding: 14px 20px;
+  }
+}

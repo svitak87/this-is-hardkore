@@ -1,0 +1,61 @@
+#accesories {
+  width: 100%;
+  padding: 30px 15px;
+  background-color: var(--primary);
+}
+
+#accesories h2 {
+  margin: 0 0 20px;
+  color: var(--alternative);
+  font-size: 2rem;
+  line-height: 1.1;
+  text-align: left;
+}
+
+#accesories .products-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#accesories .card-container {
+  width: 100%;
+  min-width: 0;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  #accesories {
+    padding: 40px 25px;
+  }
+
+  #accesories h2 {
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+  }
+
+  #accesories .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin: 0;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  #accesories {
+    padding: 50px 30px;
+  }
+
+  #accesories h2 {
+    font-size: 2.5rem;
+  }
+
+  #accesories .products-grid {
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin: 0;
+  }
+}

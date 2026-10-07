@@ -1,0 +1,18 @@
+.info-blocks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .info-blocks-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .info-block {
+    flex: 1 1 calc(33.333% - 1.5rem);
+  }
+}
