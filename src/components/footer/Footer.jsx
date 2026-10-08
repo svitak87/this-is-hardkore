@@ -57,7 +57,7 @@ export const Footer = () => {
         </div>
 
         <div className="footer-social">
-          <h3>Seguinos</h3>
+          <h3>Sígannos</h3>
 
           <div className="social-icons">
             <a
