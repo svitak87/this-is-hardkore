@@ -131,7 +131,7 @@ export const products = [
   },
   {
     id: 22,
-    name: "Hoodie hardokere by Pez",
+    name: "Hoodie hardkore by Pez",
     slug: "hoodie-hardkore",
     category: "hoodies",
     price: 180000,
