@@ -4,7 +4,7 @@ export const WhatsApp = () => {
   const phone = "573144057066";
 
   const message = encodeURIComponent(
-    "Hola, quisiera hacer una consulta."
+    "Qué dicen, todo bien? Oee! una pregunta:"
   );
 
   const whatsappUrl = `https://wa.me/${phone}?text=${message}`;
