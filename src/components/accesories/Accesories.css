@@ -1,6 +1,9 @@
 #accesories {
   width: 100%;
   padding: 30px 15px;
+}
+
+[data-theme="dark"] #accesories{
   background-color: var(--primary);
 }
 

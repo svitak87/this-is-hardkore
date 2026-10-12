@@ -1,11 +1,15 @@
 import { useEffect, useRef } from "react";
 import "./Navbar.css";
-import logo from "../../assets/images/logo/logo-this-is-hardkore-white.png";
+import logoLight from "../../assets/images/logo/logo-this-is-hardkore-white.png";
+import logoDark from "../../assets/images/logo/logo-this-is-hardkore-dark.png";
+import { useTheme } from "../../hooks/useTheme.js";
 
 export const Navbar = () => {
   const navRef = useRef(null);
   const collapseRef = useRef(null);
   const togglerRef = useRef(null);
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === "dark";
 
   useEffect(() => {
     const updateOffset = () => {
@@ -63,7 +67,7 @@ export const Navbar = () => {
         <a href="#top" onClick={handleNavClick}>
           <img
             className="navbar-brand"
-            src={logo}
+            src={isDark ? logoLight : logoDark}
             alt="Logo this is hardkore"
           />
         </a>
@@ -133,6 +137,19 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
+
+        <button
+          type="button"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
+          title={isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
+        >
+          <i
+            className={`fa-solid ${isDark ? "fa-sun" : "fa-moon"}`}
+            aria-hidden="true"
+          ></i>
+        </button>
       </div>
     </nav>
   );

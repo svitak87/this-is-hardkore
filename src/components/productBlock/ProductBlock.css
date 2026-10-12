@@ -3,6 +3,12 @@
   overflow: hidden;
   background-color: var(--secondary);
   color: var(--primary);
+  border-radius: 10px;
+   border: 1px solid var(--alternative);
+}
+
+[data-theme="dark"] .card-container{
+  border: none;
 }
 
 .card-container img {

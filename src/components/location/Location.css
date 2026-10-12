@@ -1,6 +1,9 @@
 .location {
   width: 100%;
   padding: 2rem 1rem;
+}
+
+[data-theme="dark"] .location{
   background-color: var(--primary);
 }
 
@@ -22,7 +25,10 @@
   padding: 1.5rem;
   border: 1px solid var(--alternative);
   border-radius: 12px;
-  background-color: var(--secondary);
+}
+
+[data-theme="dark"] .location-info{
+  color: var(--secondary);
 }
 
 .location-info h3 {
@@ -101,6 +107,7 @@
 
   .location-info {
     padding: 2rem;
+    color: var(--primary);
   }
 
   .location-map {

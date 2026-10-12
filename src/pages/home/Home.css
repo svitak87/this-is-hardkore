@@ -44,6 +44,27 @@
   vertical-align: middle;
   margin-left: 6px;
 }
+.just-like-that{
+  background-color: var(--secondary);
+}
+[data-theme="dark"] .just-like-that{
+  background-color: var(--primary);
+}
+
+.contact-section{
+ background-color: var(--secondary);
+}
+[data-theme="dark"] .contact-section{
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+.oversize{
+ background-color: var(--secondary);
+}
+[data-theme="dark"] .oversize{
+  background-color: var(--primary);
+  color: var(--secondary);
+}
 
 .wall-posters {
   width: 100%;
@@ -53,11 +74,16 @@
   padding: 10px;
 }
 
+[data-theme="dark"] .wall-posters{
+  background-color: var(--primary);
+}
+
 .wall-posters img {
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {

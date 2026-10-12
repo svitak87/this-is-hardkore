@@ -1,8 +1,12 @@
 #hoodies {
   width: 100%;
   padding: 30px 15px;
+}
+
+[data-theme="dark"] #hoodies{
   background-color: var(--primary);
 }
+
 
 #hoodies h2 {
   margin: 0 0 20px;
